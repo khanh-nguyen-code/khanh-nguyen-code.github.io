@@ -5,7 +5,26 @@ body {
     background: #FFFFFF;
 }
 
-/* color */
-.dark-blue {
-    color: #20364c !important;
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    color: darkblue;
+    font-weight: 500;
+}
+
+h1 {
+    margin-bottom: 4rem;
+}
+
+h2, h3 {
+    margin: 0 0 2rem !important;
+    color: slategray;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+h4, h5, h6 {
+    color: slategray !important;
 }
