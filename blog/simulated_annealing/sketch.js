@@ -1,9 +1,7 @@
-const Pad = 300;
-
 // innerHeight of the canvas
-const Width = window.innerHeight - 2 * Pad;
-// width of the canvas
-const Height = window.innerHeight - 2 * Pad;
+const Width = 600;
+const Height = 600;
+
 
 const edgeDraw = function (tourEdge = [0, 0]) {
     const p0 = vertex[tourEdge[0]];
@@ -32,7 +30,7 @@ let running = false;
 
 function setup() {
     let canvas = createCanvas(Width, Height);
-    canvas.position(window.innerWidth - window.innerHeight, Pad);
+    canvas.parent("p5canvas");
 
     //frameRate(10);
     drawIter();
