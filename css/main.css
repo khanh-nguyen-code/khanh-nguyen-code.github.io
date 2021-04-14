@@ -5,6 +5,29 @@ body {
     background: #FFFFFF;
 }
 
+/* navbar */
+.navbar {
+    background: #343a40;
+}
+
+.navbar-brand {
+    font-size: 2.15rem !important;
+    font-weight: 500;
+    color: whitesmoke !important;
+    font-family: "Montserrat", Helvetica, sans-serif !important;
+    text-decoration: none;
+}
+
+.navbar-button-list > li {
+    display: inline;
+}
+
+.navbar-button {
+    color: grey !important;
+    font-family: "Montserrat", Helvetica, sans-serif !important;
+    text-decoration: none;
+}
+
 /* typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", Helvetica, sans-serif;
