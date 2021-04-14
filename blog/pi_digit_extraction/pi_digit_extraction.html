@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khanh Nguyen</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <div class="include" url="../template/navbar.html"></div>
+    <div class="content">
+        <div id="highlight" name="blog" ></div>
+        <h1>Pi Digit Extraction</h1>
+        <h2>calculate pi on your browser</h2>
+        Github Repo: <a href="https://github.com/khanhhhh/pi_digit_extraction">here</a>, Pi <a href="https://www.pi2e.ch/blog/wp-content/uploads/2017/03/pi_dec_1m.txt">here</a>
+        <br>
+        <input id="pause" type="button" value="start"> <div id="status"></div>
+        <label for="placeholder"></label><textarea id="placeholder" name="textarea" style="font-family: Arial,sans-serif;font-size: 12pt;width:100%;height:100vw" readonly></textarea>
+
+
+        <script src="digit_extraction.js" type="module"></script>
+        <script src="hex2dec.js" type="module"></script>
+        <script src="pi_digit_extraction.js" type="module"></script>
+    </div>
+    <div class="include" url="../../footer.html"></div>
+    <script src="../../js/post_script.js"></script>
+</body>
+</html>
