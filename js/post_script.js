@@ -1,33 +1,72 @@
-function include(cb) {
+function makeRequest(method = "GET", url = "index.html") {
+    // send a request and return a promise
+    // tested for the default argument only
+    return new Promise(function (resolve, reject) {
+        const request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    resolve(request);
+                } else {
+                    reject(request);
+                }
+            }
+        };
+        request.open(method, url, true);
+        request.send();
+    });
+}
+
+
+function includeHTML() {
     // for all elements from this site
     // if they have "include-url", that is a html file
     // get that file and replace the element
 
     // how to use
-    // <div include-url="navbar.html"></div>
+    // <div class="include" url="navbar.html"></div>
     // content
-    // <div include-url="footer.html"></div>
+    // <div class="include" url="footer.html"></div>
     // <script src="js/post_script.js"></script>
+    //
+    // result: navbar and footer are included before and after content
 
-    const z = document.getElementsByTagName("*");
-    for (let i = 0; i < z.length; i++) {
-        const elem = z[i];
-        const url = elem.getAttribute("include-url");
-        if (url) {
-            const request = new XMLHttpRequest();
-            request.onreadystatechange = function () {
-                if (this.readyState === 4 && this.status === 200) {
-                    elem.innerHTML = this.responseText;
-                    elem.removeAttribute("include-url");
-                    include(cb);
-                }
-            };
-            request.open("GET", url, true);
-            request.send();
-        }
+    const elements = document.getElementsByClassName("include");
+    const promises = [];
+    for (let i=0; i<elements.length; i++) {
+        const element = elements[i];
+        const url = element.getAttribute("url");
+        promises.push(makeRequest("GET", url).then(function (data) {
+            element.innerHTML = data.responseText;
+        }));
     }
-    if (cb)
-        cb();
+    return Promise.all(promises);
 }
 
-include();
+function highlightTab() {
+    // highlight a tab name
+
+    // how to use
+    // <div id="highlight" name="about" ></div>
+    //
+    // result : if there is an element of id "about", its color will change to white
+    return new Promise(function (resolve, reject) {
+        const highlighter = document.getElementById("highlight");
+        if (highlighter === null) {
+            reject();
+        }
+        const elementId = highlighter.getAttribute("name");
+        if (elementId === null) {
+            reject();
+        }
+        const element = document.getElementById(elementId);
+        if (element === null) {
+            reject();
+        }
+        element.style.color = "white";
+        resolve();
+    });
+}
+
+includeHTML().then(highlightTab).catch(console.log);
+
