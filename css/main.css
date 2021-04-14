@@ -1,15 +1,16 @@
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Open Sans", Arial, sans-serif;
     background: #FFFFFF;
 }
 
 /* content : content of the site, all content elements should be enclosed inside this class */
 .content {
+    width: 50%;
     margin-top: 6rem; /* top margin = navbar size*/
-    margin-left: 3rem; /* left margin */
-    margin-right: 3rem; /* right margin */
+    margin-left: auto;
+    margin-right: auto;
 }
 /* container-inline : everything in a container is inline, used to make navbar and footer*/
 .container-inline {
@@ -36,6 +37,11 @@ body {
     color: whitesmoke !important;
     font-family: "Montserrat", Helvetica, sans-serif !important;
     text-decoration: none;
+}
+
+.navbar-button-list {
+    position: absolute;
+    right: 0.6rem;
 }
 
 .navbar-button-list > li {
