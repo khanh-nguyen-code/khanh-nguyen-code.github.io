@@ -7,7 +7,7 @@ body {
 
 /* content : content of the site, all content elements should be enclosed inside this class */
 .content {
-    width: 50%;
+    width: 70%;
     margin-top: 6rem; /* top margin = navbar size*/
     margin-left: auto;
     margin-right: auto;
