@@ -40,7 +40,10 @@ h4, h5, h6 {
 }
 
 .navbar-brand {
-    font-size: 2.15rem !important;
+    padding: 0.5rem;
+    margin-top: auto ;
+    margin-bottom: auto ;
+    font-size: 1.5rem !important;
     font-weight: 500;
     color: whitesmoke !important;
     font-family: "Montserrat", Helvetica, sans-serif !important;
@@ -49,12 +52,17 @@ h4, h5, h6 {
 
 .navbar-button-list > li {
     display: inline;
+    padding: 0.6rem;
 }
 
 .navbar-button {
-    color: grey !important;
+    color: grey;
     font-family: "Montserrat", Helvetica, sans-serif !important;
     text-decoration: none;
+}
+
+.navbar-button:hover {
+    color: white;
 }
 
 /* footer */
