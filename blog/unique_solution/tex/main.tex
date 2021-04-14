@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{natbib}
+\bibliographystyle{plain}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+
+\title{single-solution}
+\author{nguyenngockhanh.pbc }
+\date{January 2021}
+
+\begin{document}
+
+    Given the program:
+
+    \[
+        \textbf{Minimize: } f(x)
+        \textbf{ subject to: } c_0(x) = \sum_{i=1}^{n} x_i = 1 \text{ and } c_i(x) = -x_i \leq 0 \text{ } \forall i
+    \]
+
+
+    Such that $\frac{\partial f}{\partial x_i}$ has this property:
+
+    \[
+        \text{(1): } \text{$\frac{\partial f}{\partial x_i}$ is a monotonically increasing function for $x_i \in [0, 1]$}
+    \]
+
+    \[
+        \frac{\partial f}{\partial x_i}(x_1) < \frac{\partial f}{\partial x_i}(x_2) \text{ } \forall \text{ } 0 \leq x_1 < x_2
+    \]
+
+    \begin{theorem}[Unique solution]
+        \label{theo:unique}
+        Program has unique solution at $x_i = \frac{1}{n}$ $\forall i$
+    \end{theorem}
+
+    Lagrangian function is
+
+    \[
+        L(x, \mu, \lambda) = f(x) + \sum_{i=1}^{n} \mu_i c_i(x) + \lambda c_0(x)
+    \]
+
+    If $x*$ is a minimum, KKT conditions:
+
+    \[
+        \textbf{Stationary: } \frac{\partial L}{\partial x}(x*) = 0_n
+    \]
+    \[
+        \textbf{Primal feasibility: } c_0(x*) = 0 \text{ and } c_i(x*) \leq 0 \text{ } \forall i
+    \]
+    \[
+        \textbf{Dual feasibility: } \mu_i \geq 0 \text{ } \forall i
+    \]
+    \[
+        \textbf{Complementary slackness: } \mu_i c_i(x*) = 0 \text{ } \forall i
+    \]
+
+    We have:
+
+    \[
+        \frac{\partial L}{\partial x_k} = \frac{\partial f}{\partial x_k} - \mu_k + \lambda
+    \]
+
+    Consider 2 cases:
+
+    \textbf{Case 1:} all $x_i > 0$, due to complementary slackness, all $\mu_i = 0$. So that, all $\frac{\partial f}{\partial x_i}$ must be equal. (1) deduces that the unique solution satisfying KKT conditions is $x_i = \frac{1}{n}$
+
+    \textbf{Case 2:} some $x_i = 0$, let $x_{i1} = 0$
+
+    \[
+        \frac{\partial f}{\partial x_i}(x_{i1}) - \mu_{i1} + \lambda = 0
+    \]
+
+    \[
+        \lambda = \mu_{i1} - \frac{\partial f}{\partial x_i}(0)
+    \]
+
+    Since dual feasibility, $\mu_{i1} \geq 0$, So
+
+    \[
+        \lambda \geq - \frac{\partial f}{\partial x_i}(0)
+    \]
+
+    There is at least one $x_i > 0$, let $x_{i2} > 0$, due to complementary slackness, $\mu_{i2} = 0$, So
+
+    \[
+        \frac{\partial f}{\partial x_i}(x_{i2}) + \lambda = 0
+    \]
+
+    \[
+        \frac{\partial f}{\partial x_i}(x_{i2}) = - \lambda \leq \frac{\partial f}{\partial x_i}(0)
+    \]
+
+    (1) deduces contradiction.
+\end{document}
