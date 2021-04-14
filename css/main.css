@@ -1,11 +1,71 @@
-/* global */
 body {
+    margin: 0;
     font-size: 16px;
     font-family: "Open Sans", Arial, sans-serif;
     background: #FFFFFF;
 }
 
-/* typography */
+/* content : content of the site, all content elements should be enclosed inside this class */
+.content {
+    margin-top: 6rem; /* top margin = navbar size*/
+    margin-left: 3rem; /* left margin */
+    margin-right: 3rem; /* right margin */
+}
+/* container-inline : everything in a container is inline, used to make navbar and footer*/
+.container-inline {
+    display: flex; /* make everything in 1 line */
+    margin-left: 1rem; /* left margin */
+    margin-right: 1rem; /* right margin */
+}
+
+/* navbar : navigation bar */
+.navbar {
+    background: #343a40; /* navbar background */
+    position: fixed; /* always stay on top */
+    top: 0;
+    width: 100%; /* width */
+    height: 3rem; /* fixed height */
+}
+
+.navbar-icon {
+    padding: 0.5rem; /* padding left right top bottom*/
+    margin-top: auto ;
+    margin-bottom: auto ;
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    color: whitesmoke !important;
+    font-family: "Montserrat", Helvetica, sans-serif !important;
+    text-decoration: none;
+}
+
+.navbar-button-list > li {
+    display: inline; /* button list inline */
+    padding: 0.6rem; /* padding between buttons */
+}
+
+.navbar-button {
+    color: grey; /* button text color */
+    font-family: "Montserrat", Helvetica, sans-serif !important;
+    text-decoration: none;
+}
+
+.navbar-button:hover {
+    color: white; /* button text color when mouse hovers*/
+}
+
+/* footer */
+footer {
+}
+
+.footer-button-list > li {
+    display: inline; /* button list inline */
+}
+
+.footer-button {
+    text-decoration: none;
+}
+
+/* typography : h1 h2 ... h6 */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", Helvetica, sans-serif;
     color: darkblue;
@@ -29,51 +89,3 @@ h4, h5, h6 {
     color: slategray !important;
 }
 
-/* container-inline : everything in a container is inline*/
-.container-inline {
-    display: flex;
-}
-
-/* navbar */
-.navbar {
-    background: #343a40;
-}
-
-.navbar-brand {
-    padding: 0.5rem;
-    margin-top: auto ;
-    margin-bottom: auto ;
-    font-size: 1.5rem !important;
-    font-weight: 500;
-    color: whitesmoke !important;
-    font-family: "Montserrat", Helvetica, sans-serif !important;
-    text-decoration: none;
-}
-
-.navbar-button-list > li {
-    display: inline;
-    padding: 0.6rem;
-}
-
-.navbar-button {
-    color: grey;
-    font-family: "Montserrat", Helvetica, sans-serif !important;
-    text-decoration: none;
-}
-
-.navbar-button:hover {
-    color: white;
-}
-
-/* footer */
-footer {
-    padding-bottom: 2rem;
-}
-
-.footer-button-list > li {
-    display: inline;
-}
-
-.footer-button {
-    text-decoration: none;
-}
