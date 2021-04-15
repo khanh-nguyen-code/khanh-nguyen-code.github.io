@@ -1,24 +1,4 @@
-function makeRequest(method = "GET", url = "index.html") {
-    // send a request and return a promise
-    // tested for the default argument only
-    return new Promise(function (resolve, reject) {
-        const request = new XMLHttpRequest();
-        request.onreadystatechange = function () {
-            if (request.readyState === 4) {
-                if (request.status === 200) {
-                    resolve(request);
-                } else {
-                    reject(request);
-                }
-            }
-        };
-        request.open(method, url, true);
-        request.send();
-    });
-}
-
-
-function includeHTML() {
+async function includeHTML() {
     // for all elements from this site
     // if they have "include-url", that is a html file
     // get that file and replace the element
@@ -36,37 +16,41 @@ function includeHTML() {
     for (let i=0; i<elements.length; i++) {
         const element = elements[i];
         const url = element.getAttribute("url");
-        promises.push(makeRequest("GET", url).then(function (data) {
-            element.innerHTML = data.responseText;
-        }));
+        promises.push(fetch(url));
     }
-    return Promise.all(promises);
+    let responses = await Promise.all(promises);
+    for (let i=0; i<elements.length; i++) {
+        const element = elements[i];
+        element.innerHTML = await responses[i].text();
+    }
 }
 
-function highlightTab() {
+async function highlightTab() {
     // highlight a tab name
 
     // how to use
     // <div id="highlight" name="about" ></div>
     //
     // result : if there is an element of id "about", its color will change to white
-    return new Promise(function (resolve, reject) {
-        const highlighter = document.getElementById("highlight");
-        if (highlighter === null) {
-            reject();
-        }
-        const elementId = highlighter.getAttribute("name");
-        if (elementId === null) {
-            reject();
-        }
-        const element = document.getElementById(elementId);
-        if (element === null) {
-            reject();
-        }
-        element.style.color = "white";
-        resolve();
-    });
+
+    const highlighter = document.getElementById("highlight");
+    if (highlighter === null) {
+        throw new Error("Error: there is no element \"highlight\" ");
+    }
+    const elementId = highlighter.getAttribute("name");
+    if (elementId === null) {
+        throw new Error("Error: highlight element has no field \"name\"")
+    }
+    const element = document.getElementById(elementId);
+    if (element === null) {
+        throw new Error(`Error: there is no element \"${elementId}\"`)
+    }
+    element.style.color = "white";
 }
 
-includeHTML().then(highlightTab).catch(console.log);
+async function main() {
+    await includeHTML();
+    await highlightTab();
+}
 
+main().then(console.log).catch(console.error);
