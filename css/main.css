@@ -9,6 +9,7 @@ body {
 .content {
     width: clamp(200px, 70%, 1200px);
     margin-top: 6rem; /* top margin = navbar size*/
+    margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
 }
