@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{cycle}
+\author{nguyenngockhanh.pbc }
+\date{April 2021}
+
+% cases
+\usepackage{amsmath}
+% symbol
+\usepackage{amssymb}
+
+
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+    \maketitle
+
+    \textbf{Is there an natural number function that always has a cycle for any input and there always exists an input for an cycle longer than an arbitrary length?}
+
+
+    \section{Problem}\label{sec:problem}
+
+    Firstly, let define precisely the notations we are using in this text.
+
+    \begin{definition}(Natural Number Set)
+        \begin{equation}
+            \label{eq:natural}
+            \mathbb{N} = \{ 1, 2, 3, \dots \}
+        \end{equation}
+    \end{definition}
+
+    \begin{definition}(Natural Number Function)
+        All functions that have the domain and range $\mathbb{N}$
+        \begin{equation}
+            \label{eq:function}
+            f: \mathbb{N} \to \mathbb{N}
+        \end{equation}
+    \end{definition}
+
+    Denote $f^m(n)$ where $n \in \mathbb{N}$ be the value of $m$-times recursive call of function $f$ to input $n$.
+    More formally,
+
+    \begin{gather*}
+        f^1(n) = f(n),\\
+        f^{m+1}(n) = f(f^m(n))\\
+    \end{gather*}
+
+
+    \begin{definition}(Cycle number of a Natural Number Function)
+        Let $f: \mathbb{N} \to \mathbb{N}$.
+        A cycle set of $n$ is the set of all numbers $m \in \mathbb{N}$ such that $f^m(n) = n$
+
+        \begin{equation}
+            \label{eq:cycle_set}
+            c^{(f)}(n) = \{m : m \in \mathbb{N} \land f^m(n) = n \}
+        \end{equation}
+        if cycle set is non-empty, define the cycle number as the smallest number in the cycle set
+        \begin{equation}
+            \label{eq:cycle_number}
+            c^{(f)}_{\min}(n) = \min{c^{(f)}(n)}
+        \end{equation}
+    \end{definition}
+
+    In this text, we ignore the trivial case where cycle number is 1.
+
+    Our main theorem is stated as follows
+
+    \begin{theorem}(Cycle)
+        There exists a natural number function such that (1) it has a non-trivial cycle number for every input and (2) the set of all cycle numbers is unbounded.
+
+        \begin{equation}
+            \label{eq:cycle_theorem}
+            \exists f : \mathbb{N} \to \mathbb{N}, (
+            \forall n \in \mathbb{N},
+            c^{(f)}_{\min}(n) > 1
+            ) \land (
+            \forall m_0 \in \mathbb{N},
+            \exists n \in \mathbb{N},
+            c^{(f)}_{\min}(n) \geq m_0
+            )
+        \end{equation}
+    \end{theorem}
+
+    In other words, this function partitions the natural number set into infinitely number of finite subsets where the cardinality of them are unbounded.
+    Each cycle is associated with a subset.
+
+
+    \section{Proof}\label{sec:proof}
+
+    A simple construction satisfies those properties is as follows:
+
+    Suppose we found partition on $\mathbb{N}$ of ($1^*$) infinitely many finite subsets where ($1^{**}$) each of them has the cardinality of at least 2, ($2^*$) the cardinality of these subsets is unbounded.
+
+    \begin{equation}
+        \label{eq:partition}
+        \mathbb{P} = \{ P_i \}_{i=1}^\infty = \{ P_1, P_2, P_3, \dots \}
+    \end{equation}
+
+    Where we order all elements in each $P_i$, so that for every $P_i$, we have a minimum element, a maximum element and a function to yield the successor element if the input is not the maximum element namely
+
+    \begin{equation}
+        \label{eq:succ_func}
+        succ_i : P_i \backslash \{ \max{P_i} \} \to P_i \backslash \{ \min{P_i} \}
+    \end{equation}
+
+    Define a function $f_i: P_i \to P_i$ that returns minimum element of $P_i$ if the input is the maximum element of $P_i$, otherwise return its successor.
+
+    \begin{equation}
+        \label{eq:func_sub}
+        f_i(n)=
+        \begin{cases}
+            \min P_i &\text{if $n = \max P_i$}.\\
+            succ_i(n) &\text{otherwise}.
+        \end{cases}
+    \end{equation}
+
+    This function has a cycle number of the cardinality of $P_i$
+    Since $\mathbb{P}$ is a partition, these $P_i$ are disjoint and their union is $\mathbb{N}$.
+    We define the function $f: \mathbb{N} \to \mathbb{N}$
+
+    \begin{equation}
+        \label{eq:func}
+        f(n)= f_i(n) \text{ if } n \in P_i
+    \end{equation}
+
+    ($1^* \land 1^{**} \to 1$) For every input $n$, the cycle number is $|P_i| \geq 2$ where $P_i$ is the associated subset. ($2^* \to 2$) Since these subsets are unbounded in size, the set of all cycle numbers of $f$ is also unbounded.
+
+    In order to finish the proof, we will show a partition on $\mathbb{N}$ that satisfies ($1^*$), ($1^{**}$) and ($2^*$).
+
+    Let $S_i$ be the set of all natural numbers in the range $[2^i, 2^{i+1})$ for $i=0, 1, 2, \dots$.
+    e.g. $S_0 = \{ 1 \}$, $S_1 = \{ 2, 3 \}$, $S_2 = \{ 4 , 5, 6, 7 \}$, $S_3 = \{ 8, 9, \dots, 15 \}$, etc.
+
+    Our partition is in the form
+
+    \begin{equation}
+        \label{eq:partition_concrete}
+        \mathbb{P} = \{\{ S_0 \cup S_1 \}\} \cup \{ S_i \}_{i=2}^\infty
+    \end{equation}
+
+
+\end{document}
