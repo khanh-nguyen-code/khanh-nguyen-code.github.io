@@ -11,7 +11,59 @@
         <div id="highlight" name="blog" ></div>
 
         <h1>An Cycle in Natural Number Function</h1>
-        <iframe allowfullscreen height="900px" src='cycle.pdf' width='100%'></iframe>
+            <h2>Problem Statement and Proof</h2>
+            <iframe allowfullscreen height="900px" src='cycle.pdf' width='100%'></iframe>
+            <h2>Code</h2>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            <pre><code class="python">
+from typing import Callable
+
+
+def f(n: int) -> int:
+    def _log2(n: int) -> int:
+        return len(bin(n)) - 3
+
+    def _find_i(n: int) -> int:
+        if n < 4:
+            # S_0 and S_1
+            return 1
+        else:
+            # S_2, S_3, ...
+            return _log2(n)
+
+    def f_(i: int, n: int) -> int:
+        if n == 2 ** (i + 1) - 1:
+            # max element
+            if i == 1:
+                # S_0 and S_1
+                return 1
+            else:
+                # S_2, S_3, ...
+                return 2 ** i
+        else:
+            # other element
+            return n + 1
+
+    i = _find_i(n)
+    return f_(i, n)
+
+
+def c_min(f: Callable[[int], int], n: int) -> int:
+    m = 1
+    out = f(n)
+    while True:
+        m += 1
+        out = f(out)
+        if out == n:
+            return m
+
+
+if __name__ == "__main__":
+    for n in range(1, 1000):
+        print(f"{n}: c_min {c_min(f, n)}")
+            </code></pre>
 
     </div>
     <div class="include" url="../../footer.html"></div>
