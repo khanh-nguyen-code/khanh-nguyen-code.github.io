@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khanh Nguyen</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <div class="include" url="../template/navbar.html"></div>
+    <div class="content">
+        <div id="highlight" name="blog" ></div>
+        <h1>How I install an application in Linux</h1>
+        <h2>First Rule</h2>
+        NEVER MESS WITH THE DEFAULT PACKAGE MANAGER. IT IS USED TO WORK WITH THE OPERATING SYSTEM ONLY!
+
+        <h2>GUI Application</h2>
+        (1) Find a distribution on <b>flathub</b> and you are done.
+        <br>
+        (2) If the previous steps does not work. Try with <b>linuxbrew</b>, download the binaries or build the application from source.
+        <br>
+        (3) Create a <b>.desktop</b> file and put it in <b>~/.local/share/applications/</b> to create a GNOME application launcher.
+
+        <h2>CLI Application</h2>
+        (1) Try with <b>linuxbrew</b>, download the binaries or build the application from source.
+        <br>
+        (2) Edit <b>PATH</b> in <b>~/.bashrc</b> to access the binaries globally.
+    </div>
+    <div class="include" url="../../footer.html"></div>
+    <script src="../../js/post_script.js"></script>
+</body>
+</html>
