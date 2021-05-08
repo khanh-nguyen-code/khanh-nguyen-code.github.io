@@ -15,7 +15,6 @@
 \begin{document}
     \maketitle
 
-
     \section{Mass-Spring System}
 
     \subsection{The two particles system}
@@ -115,7 +114,6 @@
 
     For an arbitrary initial condition, since the system is linear, we can decompose the displacement $z$ into the eigenbasis of the Laplacian matrix then solve each of the component individually.
 
-
     \section{Graph Laplacian Basis}
 
     Recall that, the eigen decomposition of $L$ is as follow:
@@ -133,14 +131,14 @@
     The convolution in spatial domain is equivalent to multiplication in spectral domain. Define the convolution operation as:
 
     \begin{equation}
-        y =  U ( U^T w \odot U^T x )
+        y(x) =  U ( U^T w \odot U^T x )
         \label{eq:conv_vec}
     \end{equation}
 
     Where $w \in \mathbb{R}^n$ is called filter or kernel. Define $W = diag(U^T w)$ be the diagonal matrix whose entries are the entries of $U^T w$, we can rewrite \ref{eq:conv_vec} as
 
     \begin{equation}
-        y =  (U W U^T) x
+        y(x) =  (U W U^T) x
     \end{equation}
 
     \subsection{ChebNet}
@@ -174,13 +172,19 @@
         T_{n+1}(x) = 2x T_n(x) - T_{n-1}(x)
     \end{equation}
 
-    Where $x \in [-1, +1]$, $T_0(x) = 1$ and $T_1(x) = x$. We approximate $w_i$ by the weighted sum of the first $K$ terms of Chebyshev polynomials of the first kind with the normalized eigenvalues.
+    Where $x \in [-1, +1]$, $T_0(x) = 1$ and $T_1(x) = x$. Let $f_i: [-1, +1] \to \mathbb{R}$ is an arbitrary function such that $f_i(\Tilde{\lambda_i}) = w_i$ where $\Tilde{\lambda_i} = \frac{2 \lambda_i}{\lambda_{\max}} - 1 \in [-1, +1]$, $\lambda_{\max}$ is the largest eigenvalue. We want to project $f_i$ into the subspace with the orthogonal basis of the first $K$ terms of Chebyshev polynomials of the first kind. We can write $f_i$ as
 
     \begin{equation}
-        \hat{w_i} = \sum_{k=0}^{K-1} \theta_{k i} T_k(\Tilde{\lambda_i})
+        \hat{f}_i(t) = \sum_{k=0}^{K-1} \theta_{k i} T_k(t)
     \end{equation}
 
-    Where $\Tilde{\lambda_i} = \frac{2 \lambda_i}{\lambda_{\max}} - 1 \in [-1, +1]$, $\lambda_{\max}$ is the largest eigenvalue. We can rewrite it in the matrix form:
+    Hence, $w_i$ is approximated as
+
+    \begin{equation}
+        \hat{w_i} = \hat{f}_i(\Tilde{\lambda_i}) = \sum_{k=0}^{K-1} \theta_{k i} T_k(\Tilde{\lambda_i})
+    \end{equation}
+
+    Matrix form of the approximation on $W$:
 
     \begin{equation}
         \hat{W} = \sum_{k=0}^{K-1} \theta_k T_k(\Tilde{\Lambda})
@@ -195,7 +199,7 @@
     Where $\Tilde{\mathcal{L}} = \frac{2 \mathcal{L}}{\lambda_{\max}} - I$. The convolution operation is
 
     \begin{equation}
-        y = \sum_{k=0}^{K-1} \theta_k T_k(\Tilde{\mathcal{L}}) x
+        y(x) = \sum_{k=0}^{K-1} \theta_k T_k(\Tilde{\mathcal{L}}) x
     \end{equation}
 
 
@@ -215,7 +219,7 @@
     The convolution operation is
 
     \begin{equation}
-        y = \theta_0 x - \theta_1 D^{-\frac{1}{2}} A D^{-\frac{1}{2}} x
+        y(x) = \theta_0 x - \theta_1 D^{-\frac{1}{2}} A D^{-\frac{1}{2}} x
     \end{equation}
 
     The notes here is greatly inspired by \cite{chen2020note}.
