@@ -196,13 +196,19 @@
         U \hat{W} U^T = \sum_{k=0}^{K-1} \theta_k U T_k(\Tilde{\Lambda}) U^T = \sum_{k=0}^{K-1} \theta_k T_k(\Tilde{\mathcal{L}})
     \end{equation}
 
-    Where $\Tilde{\mathcal{L}} = \frac{2 \mathcal{L}}{\lambda_{\max}} - I$. The convolution operation is
+    Where $\Tilde{\mathcal{L}} = \frac{2 \mathcal{L}}{\lambda_{\max}} - I$. It is a great exercise to prove the Chebyshev recurrence for $\Tilde{\mathcal{L}}$:
+
+    \begin{equation}
+        T_{n+1}(\Tilde{\mathcal{L}}) = 2 \Tilde{\mathcal{L}} T_n(\Tilde{\mathcal{L}}) - T_{n-1}(\Tilde{\mathcal{L}})
+    \end{equation}
+
+
+
+    Finally, The convolution operation is
 
     \begin{equation}
         y(x) = \sum_{k=0}^{K-1} \theta_k T_k(\Tilde{\mathcal{L}}) x
     \end{equation}
-
-
 
     The construction of ChebNet avoids decomposing the matrix $L$ as compare to \ref{eq:conv_vec}.
 
