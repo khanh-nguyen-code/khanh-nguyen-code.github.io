@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khanh Nguyen</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <div class="include" url="../template/navbar.html"></div>
+    <div class="content">
+        <div id="highlight" name="blog" ></div>
+        <h1>How I install applications in M1 macbook</h1>
+
+        <img src="Screenshot 2021-08-07 at 02.09.14.png" alt="screenshot" width="400rem">
+        <br>
+        <br>
+        <br>
+
+        <h2>Package Manager</h2>
+
+        MacPorts - <a href="https://www.macports.org/">https://www.macports.org/</a>
+
+        <br>
+        <i>MacPorts principles emphasize building its little world without any dependency from the host OS. (opposite to Homebrew)</i>
+        <br>
+        <br>
+        <br>
+
+        <h2>CLI Application</h2>
+
+        Preferably install from MacPorts, if the port is unavailable, request the authors.
+        Otherwise, download binaries or compile the source code and put into <b>~/Packages</b> folder.    
+
+        <br>
+        <br>
+        <br>
+        
+        <h3>Python</h3>
+
+        Latest python package name - <b>python39</b>
+        <br>        
+        Install Python - <b>sudo port install &lt;python package name&gt;</b>
+        <br>
+        Set allias for python - <b>sudo port select --set python &lt;python package name&gt;</b>
+        <br>
+        Install python environment (miniforge3 - conda) - <a href="https://github.com/conda-forge/miniforge/releases">https://github.com/conda-forge/miniforge/releases</a>
+        <br>
+        <br>
+        <br>
+
+        <h2>GUI Application</h2>
+
+        Preferably download <b>.app</b> file (similar to AppImage for Linux).
+        
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="include" url="../../footer.html"></div>
+    <script src="../../js/post_script.js"></script>
+</body>
+</html>
