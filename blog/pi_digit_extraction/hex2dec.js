@@ -1,4 +1,3 @@
-
 console.log("loaded hex2dec.js");
 
 const i10 = BigInt(10);
@@ -7,6 +6,10 @@ const hex2char = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c
 
 function hex2dec(hex_list = []) {
     let dec_list = [];
+
+    if (hex_list.length === 0) {
+        return [];
+    }
 
     let h = BigInt("0x" + hex_list.map(function (num) {
         return hex2char[num];
