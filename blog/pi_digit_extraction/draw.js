@@ -26,6 +26,7 @@ function draw() {
     }
     if (state === CRUNCHING) {
         // CRUNCHING
+        n = n + BigInt(1);
         document.getElementById("status").textContent = `status: crunching ${n}-th hexadecimal digit of pi`
         const digit = PiBBP(n);
         hex_list.push(digit);
@@ -38,7 +39,6 @@ function draw() {
         const dec_list = hex2dec(copied);
         document.getElementById("placeholder").textContent = "3." + dec_list.join("");
         state = CRUNCHING;
-        n = n + BigInt(1);
     }
     setTimeout(draw, 0);
 }
