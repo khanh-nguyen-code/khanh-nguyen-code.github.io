@@ -1,1 +1,313 @@
-<mxfile host="app.diagrams.net" modified="2021-08-19T03:46:11.148Z" agent="5.0 (Macintosh)" version="14.9.6" etag="ioyfCmm6zV4hhiKgC7IK" type="github"><diagram id="nkVZgSskWary7ASvaa-Y">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-08-19T04:12:59.372Z" agent="5.0 (Macintosh)" etag="x0bI8MsGt3o1qO3ZJu0L" version="14.9.6" type="github">
+  <diagram id="nkVZgSskWary7ASvaa-Y" name="Page-1">
+    <mxGraphModel dx="4077" dy="2378" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--1" value="MH1812 - Discrete Mathematics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-740" y="580" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--2" value="CZ1003 - Introduction to Computational Thinking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="750" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--3" value="CZ1004 - Introduction to Computing Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="590" y="760" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--4" value="CZ1005 - Digital Logic" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="870" y="640" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--5" value="CZ1011 - Engineering Mathematics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-340" y="700" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--6" value="CZ1012 - Engineering Mathematics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-340" y="480" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--8" value="CZ1007 - Data Structures" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="360" y="570" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--10" value="CZ2001 - Algorithms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="280" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--12" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--5" target="rPKr6Mx89C8r4C3BYC3--6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-70" y="500" as="sourcePoint" />
+            <mxPoint x="-20" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--13" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--2" target="rPKr6Mx89C8r4C3BYC3--8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="720" as="sourcePoint" />
+            <mxPoint x="380" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--14" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--1" target="rPKr6Mx89C8r4C3BYC3--10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-110" y="490" as="sourcePoint" />
+            <mxPoint x="-60" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--15" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--6" target="rPKr6Mx89C8r4C3BYC3--10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-160" y="470" as="sourcePoint" />
+            <mxPoint x="-110" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--16" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--8" target="rPKr6Mx89C8r4C3BYC3--10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-130" y="450" as="sourcePoint" />
+            <mxPoint x="-80" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--17" value="CZ2002 - Object Oriented Programming" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--18" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--8" target="rPKr6Mx89C8r4C3BYC3--17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-140" y="480" as="sourcePoint" />
+            <mxPoint x="-90" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--19" value="CZ1006 - Computer Organisation and Architecture" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="830" y="480" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--20" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--4" target="rPKr6Mx89C8r4C3BYC3--19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="710" as="sourcePoint" />
+            <mxPoint x="590" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--21" value="CZ2005 - Operating Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="540" y="370" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--22" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--8" target="rPKr6Mx89C8r4C3BYC3--21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-160" y="480" as="sourcePoint" />
+            <mxPoint x="-110" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--23" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--19" target="rPKr6Mx89C8r4C3BYC3--21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="510" as="sourcePoint" />
+            <mxPoint x="650" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--24" value="CZ2005 - Introduction to Databases" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="30" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--25" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--10" target="rPKr6Mx89C8r4C3BYC3--24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-20" y="430" as="sourcePoint" />
+            <mxPoint x="30" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--26" value="CZ2003 - Computer Graphics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="740" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--27" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--5" target="rPKr6Mx89C8r4C3BYC3--26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-240" y="540" as="sourcePoint" />
+            <mxPoint x="-190" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--28" value="CZ2006 - Software Engineering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--29" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--17" target="rPKr6Mx89C8r4C3BYC3--28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-250" y="520" as="sourcePoint" />
+            <mxPoint x="-200" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--30" value="CZ3001 - Advanced Computer Architecture" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="950" y="280" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--31" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--19" target="rPKr6Mx89C8r4C3BYC3--30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="700" as="sourcePoint" />
+            <mxPoint x="540" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--32" value="CZ3003 - Software System Analysis and Design" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="160" y="20" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--33" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--28" target="rPKr6Mx89C8r4C3BYC3--32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-180" y="310" as="sourcePoint" />
+            <mxPoint x="-130" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--34" value="CZ3002 - Advanced Software Engineering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="330" y="-70" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--35" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--28" target="rPKr6Mx89C8r4C3BYC3--34">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="170" as="sourcePoint" />
+            <mxPoint x="740" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--36" value="CZ3006 - Net Centric Computing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="530" y="190" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--37" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--17" target="rPKr6Mx89C8r4C3BYC3--36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--38" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--19" target="rPKr6Mx89C8r4C3BYC3--36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="340" as="sourcePoint" />
+            <mxPoint x="880" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--39" value="CZ3005 - Artificial Intelligence" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-410" y="40" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--40" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--10" target="rPKr6Mx89C8r4C3BYC3--39">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-190" y="310" as="sourcePoint" />
+            <mxPoint x="-140" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--41" value="CZ3007 - Compiler Techniques" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="10" y="120" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--42" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--28" target="rPKr6Mx89C8r4C3BYC3--41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-140" y="390" as="sourcePoint" />
+            <mxPoint x="-90" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--43" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--10" target="rPKr6Mx89C8r4C3BYC3--41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-190" y="340" as="sourcePoint" />
+            <mxPoint x="-140" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--44" value="CZ4013 - Distributed Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="790" y="70" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--45" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--36" target="rPKr6Mx89C8r4C3BYC3--44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="910" y="250" as="sourcePoint" />
+            <mxPoint x="960" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--46" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--21" target="rPKr6Mx89C8r4C3BYC3--44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="310" as="sourcePoint" />
+            <mxPoint x="870" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--47" value="CZ4015 - Simulation and Modelling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry y="530" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--48" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--5" target="rPKr6Mx89C8r4C3BYC3--47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="580" as="sourcePoint" />
+            <mxPoint x="250" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--49" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--8" target="rPKr6Mx89C8r4C3BYC3--47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="570" as="sourcePoint" />
+            <mxPoint x="250" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--50" value="CZ4016 - Advanced Techniques in Algorithms - Introduction to algorithms - CLRS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-700" y="50" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--51" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--10" target="rPKr6Mx89C8r4C3BYC3--50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-500" y="380" as="sourcePoint" />
+            <mxPoint x="-450" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--52" value="CZ4023 - Advanced Computer Networks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="-70" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--53" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--36" target="rPKr6Mx89C8r4C3BYC3--52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="110" as="sourcePoint" />
+            <mxPoint x="720" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--54" value="CZ4031 - Database System Principles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="-100" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--55" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--24" target="rPKr6Mx89C8r4C3BYC3--54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-390" y="80" as="sourcePoint" />
+            <mxPoint x="-150" y="-60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--56" value="CZ4041 - Machine Learning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry y="680" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--57" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--5" target="rPKr6Mx89C8r4C3BYC3--56">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-530" y="620" as="sourcePoint" />
+            <mxPoint x="-480" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--58" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--8" target="rPKr6Mx89C8r4C3BYC3--56">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-540" y="540" as="sourcePoint" />
+            <mxPoint x="-490" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--59" value="CZ4042 - Neural Networks and Deep Learning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry y="270" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--60" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--6" target="rPKr6Mx89C8r4C3BYC3--59">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-460" y="450" as="sourcePoint" />
+            <mxPoint x="-410" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--61" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--8" target="rPKr6Mx89C8r4C3BYC3--59">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-470" y="530" as="sourcePoint" />
+            <mxPoint x="-420" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--62" value="CZ4045 - Natural Language Processing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-700" y="290" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--63" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--10" target="rPKr6Mx89C8r4C3BYC3--62">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-620" y="400" as="sourcePoint" />
+            <mxPoint x="-570" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--64" value="CZ4046 - Intelligent Agents" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-850" y="420" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--65" value="CZ4071 - Network Science" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-810" y="140" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--66" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--10" target="rPKr6Mx89C8r4C3BYC3--65">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-840" y="310" as="sourcePoint" />
+            <mxPoint x="-790" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--67" value="Linear Algebra II - Linear Algebra Done Right -Sheldon Axler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-1400" y="590" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--68" value="Analysis I - Understanding Analysis - Stephen Abbott" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-1160" y="700" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--69" value="Linear Algebra I - CZ1011" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-1400" y="700" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--70" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--69" target="rPKr6Mx89C8r4C3BYC3--67">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1390" y="1000" as="sourcePoint" />
+            <mxPoint x="-1340" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
