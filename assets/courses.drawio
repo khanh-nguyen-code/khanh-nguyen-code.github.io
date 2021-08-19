@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-19T04:12:59.372Z" agent="5.0 (Macintosh)" etag="x0bI8MsGt3o1qO3ZJu0L" version="14.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-19T06:07:15.912Z" agent="5.0 (Macintosh)" etag="MKs67lUUYjL1sD6mi-o5" version="14.9.6" type="github">
   <diagram id="nkVZgSskWary7ASvaa-Y" name="Page-1">
     <mxGraphModel dx="4077" dy="2378" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -8,7 +8,7 @@
           <mxGeometry x="-740" y="580" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--2" value="CZ1003 - Introduction to Computational Thinking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="240" y="750" width="200" height="60" as="geometry" />
+          <mxGeometry x="360" y="840" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--3" value="CZ1004 - Introduction to Computing Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="590" y="760" width="200" height="60" as="geometry" />
@@ -68,7 +68,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--19" value="CZ1006 - Computer Organisation and Architecture" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="830" y="480" width="200" height="60" as="geometry" />
+          <mxGeometry x="810" y="430" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--20" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--4" target="rPKr6Mx89C8r4C3BYC3--19">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -77,7 +77,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--21" value="CZ2005 - Operating Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="540" y="370" width="200" height="60" as="geometry" />
+          <mxGeometry x="540" y="430" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--22" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--8" target="rPKr6Mx89C8r4C3BYC3--21">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -146,7 +146,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--36" value="CZ3006 - Net Centric Computing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="530" y="190" width="200" height="60" as="geometry" />
+          <mxGeometry x="610" y="50" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--37" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--17" target="rPKr6Mx89C8r4C3BYC3--36">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -185,7 +185,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--44" value="CZ4013 - Distributed Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="790" y="70" width="200" height="60" as="geometry" />
+          <mxGeometry x="550" y="260" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--45" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--36" target="rPKr6Mx89C8r4C3BYC3--44">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -200,7 +200,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--47" value="CZ4015 - Simulation and Modelling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry y="530" width="200" height="60" as="geometry" />
+          <mxGeometry x="10" y="660" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--48" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--5" target="rPKr6Mx89C8r4C3BYC3--47">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -214,7 +214,7 @@
             <mxPoint x="250" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rPKr6Mx89C8r4C3BYC3--50" value="CZ4016 - Advanced Techniques in Algorithms - Introduction to algorithms - CLRS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--50" value="CZ4016 - Advanced Techniques in Algorithms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-700" y="50" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--51" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--10" target="rPKr6Mx89C8r4C3BYC3--50">
@@ -224,7 +224,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--52" value="CZ4023 - Advanced Computer Networks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="600" y="-70" width="200" height="60" as="geometry" />
+          <mxGeometry x="650" y="-160" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--53" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--36" target="rPKr6Mx89C8r4C3BYC3--52">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -242,7 +242,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--56" value="CZ4041 - Machine Learning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry y="680" width="200" height="60" as="geometry" />
+          <mxGeometry x="20" y="830" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--57" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--5" target="rPKr6Mx89C8r4C3BYC3--56">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -257,7 +257,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--59" value="CZ4042 - Neural Networks and Deep Learning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry y="270" width="200" height="60" as="geometry" />
+          <mxGeometry x="-10" y="520" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--60" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--6" target="rPKr6Mx89C8r4C3BYC3--59">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -292,13 +292,13 @@
             <mxPoint x="-790" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rPKr6Mx89C8r4C3BYC3--67" value="Linear Algebra II - Linear Algebra Done Right -Sheldon Axler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--67" value="Linear Algebra II - Linear Algebra Done Right -Sheldon Axler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-1400" y="590" width="200" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rPKr6Mx89C8r4C3BYC3--68" value="Analysis I - Understanding Analysis - Stephen Abbott" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--68" value="Analysis I - Understanding Analysis - Stephen Abbott" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-1160" y="700" width="200" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rPKr6Mx89C8r4C3BYC3--69" value="Linear Algebra I - CZ1011" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--69" value="Linear Algebra I" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-1400" y="700" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rPKr6Mx89C8r4C3BYC3--70" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="rPKr6Mx89C8r4C3BYC3--69" target="rPKr6Mx89C8r4C3BYC3--67">
@@ -306,6 +306,15 @@
             <mxPoint x="-1390" y="1000" as="sourcePoint" />
             <mxPoint x="-1340" y="950" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--71" value="NTU Undergraduate Courses" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-1690" y="-90" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--72" value="Self-studied Courses" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-1690" y="-30" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rPKr6Mx89C8r4C3BYC3--73" value="Self-studied Courses (Partially done)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1690" y="30" width="200" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
