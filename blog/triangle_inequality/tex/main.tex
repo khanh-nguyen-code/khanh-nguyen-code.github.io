@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{triangle inequality}
+\author{khanh}
+\date{Sep 2021}
+
+% cases
+\usepackage{amsmath}
+% symbol
+\usepackage{amssymb}
+
+
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+
+
+\begin{document}
+
+    \maketitle
+
+    Given an inner product space $V$ over field $\mathbb{F}$ ($\mathbb{R}$ or $\mathbb{C}$).
+    The inner product $\langle \cdot, \cdot \rangle: V \times V \to \mathbb{F}$ satisfies these properties:
+
+    \begin{enumerate}
+        \item \textbf{Linearity in the first argument}
+        \begin{itemize}
+            \item \textbf{Additivity} $\langle u + v, w \rangle = \langle u, w \rangle + \langle v, w \rangle$
+            \item \textbf{Homogeneity} $\langle \lambda u, v \rangle = \lambda \langle u, v \rangle$
+        \end{itemize}
+        
+        for all $u, v, w \in V$ and $\lambda \in \mathbb{F}$
+        
+        \item \textbf{Conjugate symmetry}
+        \begin{itemize}
+            \item $\langle u, v \rangle = \overline{\langle v, u \rangle}$ for all $u, v \in V$
+        \end{itemize}
+        
+        \item \textbf{Positivity}
+        \begin{itemize}
+            \item $\langle v, v \rangle \geq 0$ for all $v \in V$
+        \end{itemize}
+        
+        \item \textbf{Definiteness}
+        \begin{itemize}
+            \item $\langle v, v \rangle = 0$ if and only if $v = 0$
+        \end{itemize}
+    \end{enumerate}
+    
+    In the definition, \textbf{Linearity} and \textbf{Conjugate symmetry} implicitly imply that $\langle v, v\rangle \in \mathbb{R}$ for all $v \in V$. Hence, the inequality and equality in \textbf{Positivity} and \textbf{Definiteness} are justifiable. Furthermore, \textbf{Linearity} and \textbf{Conjugate symmetry} also imply \textbf{Conjugate Linearity}.
+    
+    \begin{itemize}
+        \item \textbf{Conjugate Additivity} $\langle w, u + v \rangle = \langle w, u \rangle + \langle w, v \rangle$
+        \item \textbf{Conjugate Homogeneity} $\langle u, \lambda v \rangle = \overline{\lambda} \langle u, v \rangle$
+    \end{itemize}
+    
+    \begin{theorem}[Pythagorean Theorem]
+        Suppose $u$ and $v$ are orthogonal in $V$ namely $\langle u, v \rangle = 0$ and $\langle v, u \rangle = 0$, then
+        \[
+            ||u + v||^2 = ||u||^2 + ||v||^2
+        \]
+        where $||v|| = \sqrt{\langle v, v\rangle}$ denotes the norm of $v$.
+        \label{theo:pythagorean}
+    \end{theorem}
+
+    \textbf{Proof}
+    \begin{flalign}
+        ||u + v||^2 &= \langle u+v, u+v \rangle \tag*{(rewrite)} \\
+                    &= \langle u, u+v \rangle + \langle v, u+v \rangle \tag*{(additivity)} \\
+                    &= \langle u, u \rangle + \langle u, v \rangle + \langle v, u \rangle + \langle v, v \rangle \tag*{(conjugate additivity)} \\
+                    &= \langle u, u \rangle + \langle v, v \rangle \tag*{($\langle u, v \rangle = 0$ and $\langle v, u \rangle = 0$)} \\
+                    &= ||u||^2 + ||v||^2 \tag*{(rewrite)}
+    \end{flalign}
+    
+    \begin{theorem}[Cauchy-Schwarz Inequality]
+    \[
+        |\langle u, v\rangle| \leq ||u|| ||v||
+    \]
+    
+    for any $u, v \in V$ where $|z| = \sqrt{z \overline{z}}$ denotes the complex modulus of $z$
+    \end{theorem}
+    
+    \textbf{Proof} \\
+    If both $||u|| = 0$ and $||v|| = 0$, trivial. Without loss of generality, assume that $||v|| > 0$, we then project $u$ into 1-dimension subspace of $v$. The projection can be obtained by 
+    \[
+        P_v u = \frac{\langle u, v \rangle}{||v||^2} v
+    \]
+    Let $w = u - P_v u$, hence $w$ and $v$ are orthogonal or $w$ and $P_v u$ are orthogonal.
+    We have
+    \begin{flalign}
+        ||u||^2 &= ||w + P_v u||^2 \tag*{(rewrite)} \\
+                &= ||w||^2 + ||P_v u||^2 \tag*{(pythagorean theorem)} \\
+                &= ||w||^2 + \langle \frac{\langle u, v \rangle}{||v||^2} v, \frac{\langle u, v \rangle}{||v||^2} v \rangle \tag*{(rewrite)} \\
+                &= ||w||^2 + \frac{\langle u, v \rangle}{||v||^2} \langle v, \frac{\langle u, v \rangle}{||v||^2} v \rangle \tag*{(homogeneity)} \\
+                &= ||w||^2 + \frac{\langle u, v \rangle}{||v||^2} \overline{(\frac{\langle u, v \rangle}{||v||^2}}) \langle v, v \rangle \tag*{(conjugate homogeneity)} \\
+                &= ||w||^2 + \frac{\langle u, v \rangle \overline{\langle u, v \rangle}}{||v||^2 \overline{||v||^2}} \langle v, v \rangle \tag*{(property of complex conjugate)} \\
+                &= ||w||^2 + \frac{|\langle u, v \rangle|^2}{||v||^2} \tag*{(rewrite, $||v|| \in \mathbb{R}$)} \\
+    \end{flalign}
+    Multiply both sides by $||v||^2$
+    \[
+        ||u||^2 ||v||^2 = ||w||^2 ||v||^2 + |\langle u, v\rangle|^2
+    \]
+    Since $||w||^2 ||v||^2 \leq 0$, 
+    \[
+        |\langle u, v\rangle|^2 \leq ||u||^2 ||v||^2
+    \]
+    Or,
+    \[
+        |\langle u, v\rangle| \leq ||u|| ||v||
+    \]
+    
+    with equality if $||w|| = 0$. In other words, $u$ and $v$ are linearly dependent.
+    
+    \begin{theorem}[Triangle Inequality]
+    \[
+        ||u + v|| \leq ||u|| + ||v||
+    \]
+    for any $u, v \in V$
+    \end{theorem}
+    
+    \textbf{Proof}
+    \begin{flalign}
+        ||u + v||^2 &= \langle u+v, u+v \rangle \tag*{(rewrite)} \\
+                    &= \langle u, u+v \rangle + \langle v, u+v \rangle \tag*{(additivity)} \\
+                    &= \langle u, u \rangle + \langle u, v \rangle + \langle v, u \rangle + \langle v, v \rangle \tag*{(conjugate additivity)} \\
+                    &= ||u||^2 + ||v||^2 + \langle u, v \rangle + \overline{\langle u, v \rangle} \tag*{(conjugate symmetry, rewrite)} \\
+                    &\leq ||u||^2 + ||v||^2 + 2 |\langle u, v \rangle| \tag*{(property of complex number)} \\
+                    &\leq ||u||^2 + ||v||^2 + 2 ||u|| ||v|| \tag*{(cauchy-schwarz inequality)} \\
+                    &= (||u|| + ||v||)^2 \tag*{(rewrite)}
+    \end{flalign}
+    Or,
+    \[
+        ||u + v|| \leq ||u|| + ||v||
+    \]
+    with equality if and only two conditions are satisfied
+    \begin{itemize}
+        \item cauchy-schwarz equality for $u$ and $v$
+        \item $\langle u, v \rangle + \overline{\langle u, v \rangle} = 2 |\langle u, v \rangle|$
+    \end{itemize}
+    
+    If both $||u|| = 0$ and $||v|| = 0$, trivial. Without loss of generality, assume that $||v|| > 0$, from the cauchy-schwarz equality, $u = \lambda v$ for any $\lambda \in \mathbb{F}$
+    \begin{flalign}
+        LHS &= \langle u, v \rangle + \overline{\langle u, v \rangle} \\
+            &= \langle u, v \rangle + \langle v, u \rangle \tag*{(conjugate symmetry)} \\
+            &= \langle \lambda v, v \rangle + \langle v, \lambda v \rangle \tag*{(rewrite)} \\
+            &= \lambda \langle v, v \rangle + \overline{\lambda} \langle v, v \rangle \tag*{(homogeneity and conjugate homogeneity)} \\
+            &= (\lambda + \overline{\lambda}) ||v||^2 \tag*{((rewrite))} \\
+        RHS &= 2|\langle \lambda v, v\rangle| \tag*{(rewrite)} \\
+            &= 2|\lambda \langle v, v\rangle| \tag*{(homogeneity)} \\
+            &= 2|\lambda ||v||^2| \tag*{(rewrite)} \\
+            &= 2|\lambda| ||v||^2 \tag*{($||v||^2 \in \mathbb{R}$)} \\
+    \end{flalign}
+    The condition in which $LHS = RHS$ is when $\lambda \geq 0$
+
+
+\end{document}
