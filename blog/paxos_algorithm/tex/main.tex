@@ -95,7 +95,7 @@
     
         \textbf{input:} ACCEPT\_REQUEST \{$proposal\_number$, $value$\}
     
-        \textbf{1} set the accepted proposal with the input, namely $accept$
+        \textbf{1} if the accepted proposal is not set or $proposal\_number$ is greater than the accepted proposal, set the accepted proposal with the input, namely $accept$
             
         \end{minipage}}
 
@@ -134,7 +134,7 @@
     
     Furthermore, $acceptor$ $q$ returns to the prepare request with the proposal \{$k$, $u^*$\} where it is the latest proposal $acceptor$ $q$ accepts.
     
-    We can establish the relation among $m$, $k$, and $n$: $m \leq k < n$, by the induction step assumption, we can conclude that $u^* = u$
+    We can establish the relation among $m$, $k$, and $n$. By step 1 of \ref{algorithm:acceptor:accept},  $m \leq k < n$, from the induction step assumption, we can conclude that $u^* = u$
     
     From the perspective of $proposal$ $p$, it receives responses from $M_2$ where there is at least one non-$Null$ proposal. The maximum $proposal\_number$ from the responses set is greater than or equal to $k$, one of the responses, namely $k^*$.
     
