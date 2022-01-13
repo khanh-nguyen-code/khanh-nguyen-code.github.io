@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{natbib}
+\bibliographystyle{plain}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+
+\title{paxos-algorithm}
+\author{Khanh Nguyen}
+\date{January 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{The Paxos Algorithm}
+
+    In Paxos algorithm, there are two type of machines: $proposer$ and $acceptor$ where each $proposer$ holds a $value$ and the goal of Paxos algorithm is to reach a consensus in the set of $acceptor$ on a single $value$.
+
+    Let assign a partition of natural numbers to each $proposer$ (each partition is a disjoint subset of natural numbers).
+    
+    The algorithm below describes the simple version of Paxos algorithm \cite{lamport2001paxos}
+    
+    \subsection{$proposer$}
+    \label{algorithm:proposer}
+    
+    \subsubsection{phase 1: prepare}
+    \label{algorithm:proposer:prepare}
+    
+        \fbox{\begin{minipage}{30em}
+    
+        \textbf{input:} a $value$ the $proposer$ intended to propose
+    
+        \textbf{1} choose a number from its partition, namely $proposal\_number$
+    
+        \textbf{2} broadcast the prepare message to all $acceptor$
+    
+            \begin{center}
+                PREPARE\_REQUEST \{$proposal\_number$\}
+            \end{center}
+    
+        \textbf{3} if it receives responses from a majority of $acceptor$, do \textbf{phase 2}
+    
+        \end{minipage}}
+    
+    \subsubsection{phase 2: accept}
+    \label{algorithm:proposer:accept}
+    
+        \fbox{\begin{minipage}{30em}
+    
+        \textbf{4} receives 
+
+            \begin{center}
+                PREPARE\_RESPONSE \{\{$proposal\_number$, $value$\} or $Null$\}
+            \end{center}
+
+        \textbf{5} if all PREPARE\_RESPONSE contain $Null$, pick the input $value$ the $proposer$ intended to propose. Else, pick the $value$ corresponding to the highest $proposer\_number$.
+        
+        \textbf{6} broadcast the accept message to all $acceptor$
+            
+            \begin{center}
+                ACCEPT\_REQUEST \{$proposal\_number$, $value$\}
+            \end{center}
+            
+        \end{minipage}}
+
+    \subsection{$acceptor$}
+    \label{algorithm:acceptor}
+    
+    an $acceptor$ holds an accepted proposal \{$proposal\_number$, $value$\} in its stable storage.
+    
+    \subsubsection{on receiving prepare request}
+    \label{algorithm:acceptor:prepare}
+    
+        \fbox{\begin{minipage}{30em}
+    
+        \textbf{input:} PREPARE\_REQUEST \{$proposal\_number$\}
+    
+        \textbf{1} if the accepted proposal is not set or $proposal\_number$ is greater than the accepted proposal, reply with the accepted proposal, namely $promise$
+        
+            \begin{center}
+                PREPARE\_RESPONSE \{\{$proposal\_number$, $value$\} or $Null$\}
+            \end{center}
+            
+        \end{minipage}}
+    
+    \subsubsection{on receiving accept request}
+    \label{algorithm:acceptor:accept}
+    
+        \fbox{\begin{minipage}{30em}
+    
+        \textbf{input:} ACCEPT\_REQUEST \{$proposal\_number$, $value$\}
+    
+        \textbf{1} if the accepted proposal is not set or $proposal\_number$ is greater than the accepted proposal, set the accepted proposal to the input, namely $accept$
+            
+        \end{minipage}}
+
+
+\section{The Proof of Correctness}
+
+    If the proposal \{$m$, $u$\} is accepted by majority of $acceptor$, the algorithm reaches the consensus on value $u$.
+    
+    \begin{theorem}
+    \label{theorem:1}
+    If the proposal \{$m$, $u$\} is accepted by majority of $acceptor$, any issued proposal \{$n$, $v$\} with $m < n$ has $v = u$
+    \end{theorem}
+    
+    Since all proposals accepted by majority of $acceptor$ must be issued at some point, there cannot be any two proposals accepted by majority of $acceptor$ with two different values. A straight forward corollary of theorem \ref{theorem:1}
+    
+    \begin{corollary}
+    \label{corollary:1}
+    All proposals accepted by majority of $acceptor$ has the same value.
+    \end{corollary}
+    
+    By guaranteeing corollary \ref{corollary:1}, $acceptor$ can notify the consensus to $proposer$ by replying if they accept the accept request. If $proposer$ receives accept responses from the majority of $acceptor$, it can confirm the consensus.
+    
+    \subsection{The proof the theorem \ref{theorem:1}}
+    
+    The theorem \ref{theorem:1} can be proved by induction.
+    
+    \begin{lemma}[induction step]
+    Let \{$m$, $u$\} be the first proposal accepted by majority of $acceptor$.
+    Let \{$n$, $v$\} be an issued proposal with $m < n$.
+    Suppose that, for all $k \in [m, n)$, the proposal with $k$ has value $u$, then $v = u$
+    \end{lemma}
+    
+    Let $M_1$ be the set of $acceptor$ that accepted \{$m$, $u$\}, proposal \{$n$, $v$\} is issued by some $proposer$ $p$ hence its prepare request must be replied from some majority set of $acceptor$, namely $M_2$.
+    
+    Let an $acceptor$ $q \in M_1 \cap M_2$, since $m < n$, from step 1 of \ref{algorithm:acceptor:prepare}, we know that $acceptor$ $q$ must accept \{$m$, $u$\} before receiving prepare request of $n$.
+    
+    Furthermore, $acceptor$ $q$ returns to the prepare request with the proposal \{$k$, $u^*$\} where it is the latest proposal $acceptor$ $q$ accepts.
+    
+    We can establish the relation among $m$, $k$, and $n$: $m \leq k < n$, by the induction step assumption, we can conclude that $u^* = u$
+    
+    From the perspective of $proposal$ $p$, it receives responses from $M_2$ where there is at least one non-$Null$ proposal. The maximum $proposal\_number$ from the responses set is greater than or equal to $k$, one of the responses, namely $k^*$.
+    
+    We can further establish the relation between $k^*$ and $n$. Since, $proposer$ $p$ receives $k^*$ from an $acceptor$ that accepted a proposal with $proposal\_number$ $k^*$, from step 1 of \ref{algorithm:acceptor:prepare}, $k^* < n$
+    
+    Therefore, $m \leq k \leq k^* < n$, that implies $proposer$ $p$ picks the $value$ corresponding to the highest $proposer\_number$ $k^*$ which is $u$. Or, $v = u$
+
+
+\bibliography{references}
+
+\end{document}
