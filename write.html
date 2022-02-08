@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khanh Nguyen</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="include" url="navbar.html"></div>
+    <div class="content">
+        <div id="highlight" name="write" ></div>
+        <h1>Drop me a message</h1>
+        <button onclick="toggle_admin()">toggle admin features</button> 
+        <br>
+        <textarea id="token" name="textarea" style="width:30%;height:1.5vw;resize:none;display:none">left empty</textarea>
+        <br>
+        Your name:
+        <br>
+        <textarea id="author" name="textarea" style="width:30%;height:1.5vw;resize:none">anonymous</textarea>
+        <br>
+        What you want to write to me
+        <br>
+        <textarea id="content" name="textarea" style="width:30%;height:3vw"></textarea>
+        <br>
+        <button onclick="send()">send</button>
+        <br>
+        <h1>History</h1>
+        <div id="log">history is loading...</div>
+    </div>
+    <div class="include" url="footer.html"></div>
+    <script src="js/post_script.js"></script>
+    <script src="js/write.js"></script>
+</body>
+</html>
