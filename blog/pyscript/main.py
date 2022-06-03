@@ -11,7 +11,8 @@ def create_figure() -> plt.Figure:
     x = np.arange(0, 20, 0.01)
     y = np.sin(x)
 
-    fig, ax = plt.subplots()
+    fig = plt.figure()
+    ax = fig.subplots()
 
     ax.set_title("pyscript test figure")
     ax.set_xlabel("x")
